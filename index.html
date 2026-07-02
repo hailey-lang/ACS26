@@ -308,12 +308,12 @@ footer{background:var(--stone);border-top:0.5px solid var(--border);padding:64px
 .lg-eyebrow-green{color:var(--green);}
 .lg-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,46px);letter-spacing:0.04em;line-height:1.0;}
 .lg-title span{color:var(--green);}
-.lg-body{padding:28px 28px 32px;background:var(--stone);flex:1;}
-.lg-body-event{background:var(--fog);flex:1;}
+.lg-body{padding:28px 28px 32px;background:var(--stone);flex:1;display:flex;flex-direction:column;}
+.lg-body-event{background:var(--fog);flex:1;display:flex;flex-direction:column;}
 .lg-body p{font-size:16px;color:var(--muted);line-height:1.7;}
 .lg-body p+p{margin-top:10px;}
 .lg-body strong{color:var(--white);}
-.lg-highlight{display:flex;align-items:flex-start;gap:10px;background:rgba(200,241,53,0.08);border:0.5px solid rgba(200,241,53,0.3);border-radius:3px;padding:13px 16px;margin-top:16px;font-size:13px;color:var(--white);line-height:1.55;}
+.lg-highlight{display:flex;align-items:flex-start;gap:10px;background:rgba(200,241,53,0.08);border:0.5px solid rgba(200,241,53,0.3);border-radius:3px;padding:13px;margin-top:auto !important;font-size:13px;color:var(--white);line-height:1.55;}
 .lg-highlight-icon{color:var(--green);font-size:18px;flex-shrink:0;padding-top:1px;}
 .hotel-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
 .hotel-chip{background:rgba(8,8,8,0.4);border:1px solid rgba(200,241,53,0.4);border-radius:3px;padding:6px 14px;}
@@ -636,6 +636,22 @@ h3.adh-title { font-size: inherit; font-weight: inherit; font-family: inherit; m
   color: var(--green);
 }
 .tc-content { display: flex; flex-direction: column; }
+
+/* ── EXPERIENCE CARD ALIGNMENT FIX ── */
+.location-guide { align-items: stretch; }
+.lg-card { display: flex; flex-direction: column; height: 100%; }
+.lg-body, .lg-body-event { 
+  display: flex !important; 
+  flex-direction: column !important; 
+  flex: 1 !important;
+}
+.lg-body .lg-highlight,
+.lg-body-event .lg-highlight,
+.lg-body > a[href="#venue"],
+.lg-body-event > a[href="#venue"] {
+  margin-top: auto !important;
+  padding-top: 12px;
+}
 </style>
 </head>
 <body>
@@ -876,7 +892,7 @@ h3.adh-title { font-size: inherit; font-weight: inherit; font-family: inherit; m
       <div class="lg-body">
         <p><strong>Stay in Auckland on Monday and Thursday</strong> if you plan to attend the optional activities we&rsquo;ve organized. We have planned city activities on both days &mdash; Auckland sightseeing, Waiheke Island sailing, winery visits, and more.</p>
         <p>If you stay in Auckland and attend the Monday activities, <strong>we will cover your coach transfer from Auckland to Hamilton</strong> on Tuesday morning and back on Thursday &mdash; fully hosted, no car needed.</p>
-        <div class="lg-highlight">
+        <div style="height:12px;flex-shrink:0;"></div><div class="lg-highlight" style="margin-top:auto;">
           <div class="lg-highlight-icon">&#8594;</div>
           <div><strong>Hosted coach included:</strong> Auckland &rarr; Hamilton (Tue morning) &amp; Hamilton &rarr; Auckland (Thu morning).</div>
         </div>
@@ -895,8 +911,8 @@ h3.adh-title { font-size: inherit; font-weight: inherit; font-family: inherit; m
       <div class="lg-body lg-body-event">
         <p><strong>Fly directly into Hamilton Airport (HLZ)</strong> and stay in Hamilton for Tuesday and Wednesday. Hamilton is 2.5 hours from Auckland &mdash; commuting daily is not practical.</p>
         <p>Two excellent hotels are a short walk from the BNZ Theatre. <strong>Hotels are at your own expense</strong> &mdash; room block details shared upon registration.</p>
-        <a href="#venue" style="display:inline-flex;align-items:center;gap:8px;color:var(--green);font-size:16px;font-weight:600;text-decoration:none;margin-top:14px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">See hotel recommendations &#8594;</a>
-        <div class="lg-highlight">
+        <div style="height:12px;flex-shrink:0;"></div><a href="#venue" style="display:inline-flex;align-items:center;gap:8px;color:var(--green);font-size:16px;font-weight:600;text-decoration:none;margin-top:auto;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">See hotel recommendations &#8594;</a>
+        <div style="height:12px;flex-shrink:0;"></div><div class="lg-highlight" style="margin-top:auto;">
           <div class="lg-highlight-icon">&#8592;</div>
           <div><strong>Hosted coach included:</strong> Hamilton &rarr; Auckland (Thu morning) &amp; Auckland &rarr; Hamilton (Tue morning).</div>
         </div>
