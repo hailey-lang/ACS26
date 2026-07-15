@@ -176,9 +176,10 @@ h2.disp{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,6.5vw,92px);lin
 .aday-body{background:var(--stone);}
 .arow{display:grid;grid-template-columns:170px 1fr auto;gap:20px;padding:18px 36px;border-bottom:0.5px solid var(--border);align-items:center;}
 .arow:last-child{border-bottom:none;}
-.arow.session-row{background:rgba(200,241,53,0.08);}
+.arow.session-row{background:rgba(200,241,53,0.08);align-items:start;padding-top:24px;padding-bottom:24px;}
+.arow.session-row .abadge{align-self:start;margin-top:2px;}
 .arow.session-row:hover{background:rgba(200,241,53,0.12);}
-.ar-time{font-size:12px;font-weight:700;color:var(--muted);white-space:nowrap;letter-spacing:0.04em;}
+.ar-time{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:0.04em;line-height:1.4;}
 .ar-title{font-size:16px;font-weight:500;}
 .ar-sub{font-size:14px;color:var(--muted);margin-top:3px;}
 .abadge{font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:5px 14px;border-radius:100px;white-space:nowrap;}
@@ -698,7 +699,7 @@ h3.adh-title { font-size: inherit; font-weight: inherit; font-family: inherit; m
     </a>
   </div>
   <div class="nav-right">
-    <a href="#experience">Experience</a><a href="#speakers">Speakers</a>
+    <a href="#experience">Experience</a><a href="#speakers">Speakers</a><a href="#agenda">Agenda</a>
     <a href="#venue">Venue</a>
     <a href="#faq">FAQ</a>
     <a href="https://luma.com/acs26" target="_blank" class="nav-cta">Register</a>
@@ -712,6 +713,7 @@ h3.adh-title { font-size: inherit; font-weight: inherit; font-family: inherit; m
   <nav class="mobile-menu-nav" aria-label="Mobile navigation">
     <a href="#experience">Experience</a>
     <a href="#speakers">Speakers</a>
+    <a href="#agenda">Agenda</a>
     <a href="#venue">Venue</a>
     <a href="#faq">FAQ</a>
     <a href="https://luma.com/acs26" target="_blank" class="mobile-menu-cta">Register</a>
@@ -895,9 +897,6 @@ h3.adh-title { font-size: inherit; font-weight: inherit; font-family: inherit; m
     </div></div>
 </div></div></div>
 
-<!-- AGENDA -->
-
-
 <!-- EXPERIENCE -->
 <div style="background:var(--stone);"><div class="wrap"><div class="sec" id="experience">
   <div class="eyebrow-hand" role="presentation">The New Zealand Experience</div>
@@ -972,6 +971,53 @@ h3.adh-title { font-size: inherit; font-weight: inherit; font-family: inherit; m
   </div></div>
 </div>
 
+<!-- AGENDA -->
+<div style="background:var(--stone);"><div class="wrap"><div class="sec" id="agenda">
+  <div class="eyebrow-hand" role="presentation">Full Schedule</div>
+  <div class="sec-head-editorial"><h2 class="italic-line" style="color:var(--white);font-family:'Playfair Display',serif;font-style:italic;">Agenda.</h2></div>
+  <div class="agenda-wrap">
+    <div class="aday">
+      <div class="aday-head main-day"><h3 class="adh-title">Wednesday, October 7 &mdash; Mainstream Moment</h3><div class="adh-loc">BNZ Theatre &middot; Hamilton</div></div>
+      <div class="aday-body">
+        <div class="arow"><div class="ar-time">8:00 &ndash; 9:00 AM</div><div><div class="ar-title">Breakfast &amp; Check-In</div></div><div class="abadge ab-m">Breakfast</div></div>
+        <div class="arow"><div class="ar-time">9:00 &ndash; 9:20 AM</div><div><div class="ar-title">Welcome &amp; Framing</div><div class="ar-sub">Lee Odess &middot; Gallagher Security &middot; Cultural Liaison &mdash; featuring a Kapa Haka performance, hosted by Lee &amp; Hilary</div></div><div class="abadge ab-a">Opening</div></div>
+        <div style="padding:22px 36px 8px;font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);border-top:0.5px solid var(--border);">Theme 1 &mdash; From Doors to Identity</div>
+        <div class="arow"><div class="ar-time">9:20 &ndash; 9:30 AM</div><div><div class="ar-title">My View</div><div class="ar-sub">Michael Stuer &middot; Portier</div></div><div class="abadge ab-m">My View</div></div>
+        <div class="arow"><div class="ar-time">9:30 &ndash; 9:45 AM</div><div><div class="ar-title">1:1</div><div class="ar-sub">Virginie Flam &middot; Idemia</div></div><div class="abadge ab-m">1:1</div></div>
+        <div class="arow session-row"><div class="ar-time">9:45 &ndash; 10:10 AM</div><div><div class="ar-title">Panel: Who Owns the Customer When the Product Disappears</div><div class="ar-sub">Jason Bohrer &middot; RightCrowd &nbsp;/&nbsp; Allan Chester &middot; Any2Any &nbsp;/&nbsp; Rhys Saxon &middot; HID &nbsp;/&nbsp; Steven Whitaker &middot; ICT</div><p style="font-size:14px;color:var(--muted);line-height:1.65;margin-top:10px;max-width:660px;">As access control collapses into identity infrastructure, the thing customers buy stops being the thing they touch, and that should terrify some people in this room more than others. One side argues the company closest to the door has the trust and the install base to own the identity relationship by default. The other argues proximity to hardware means nothing once the value moves to software, and the real owner will be whoever builds the platform layer customers actually log into. This panel puts both bets on the table.</p></div><div class="abadge ab-g">Theme 1</div></div>
+        <div class="arow"><div class="ar-time">10:10 &ndash; 10:20 AM</div><div><div class="ar-title">My View</div><div class="ar-sub">Jeff Nigriny &middot; CertiPath</div></div><div class="abadge ab-m">My View</div></div>
+        <div class="arow"><div class="ar-time">10:20 &ndash; 10:35 AM</div><div><div class="ar-title">1:1</div><div class="ar-sub">Simon Ellis &middot; ASSA ABLOY</div></div><div class="abadge ab-m">1:1</div></div>
+        <div class="arow session-row"><div class="ar-time">10:35 &ndash; 11:00 AM</div><div><div class="ar-title">Panel: The Shadow Database Nobody Asked Permission to Build</div><div class="ar-sub">Gabriel Daher &middot; Inner Range &nbsp;/&nbsp; Kevin Brown &middot; Icetana &nbsp;/&nbsp; Sal D&rsquo;Agostino &middot; ID Machines &nbsp;/&nbsp; Donna Chapman &middot; Solution Concept Associates</div><p style="font-size:14px;color:var(--muted);line-height:1.65;margin-top:10px;max-width:660px;">Every PAC system on earth is sitting on identity data that modern IAM never sees, and for years that was simply how the industry worked. Now that the data has value, the question is whether that&rsquo;s an asset to be unlocked or a liability waiting to be exposed. This panel sets up the disagreement directly: is the shadow database the thing legacy vendors should be racing to monetize, or the thing that gets stripped from them the moment a real IAM player decides to come get it.</p></div><div class="abadge ab-g">Theme 1</div></div>
+        <div class="arow"><div class="ar-time">11:00 &ndash; 11:15 AM</div><div><div class="ar-title">Break</div></div><div class="abadge ab-m">Break</div></div>
+        <div style="padding:22px 36px 8px;font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);border-top:0.5px solid var(--border);">Theme 2 &mdash; Capital Shapes Strategy</div>
+        <div class="arow"><div class="ar-time">11:15 &ndash; 11:25 AM</div><div><div class="ar-title">My View</div><div class="ar-sub">Steve Van Till</div></div><div class="abadge ab-m">My View</div></div>
+        <div class="arow"><div class="ar-time">11:25 &ndash; 11:40 AM</div><div><div class="ar-title">1:1</div><div class="ar-sub">David Weinel &middot; LSC</div></div><div class="abadge ab-m">1:1</div></div>
+        <div class="arow session-row"><div class="ar-time">11:40 &ndash; 12:05 PM</div><div><div class="ar-title">Panel: What the Money Is Actually Buying</div><div class="ar-sub">Dennis Ma &middot; Townsteel &nbsp;/&nbsp; Joe Grillo &nbsp;/&nbsp; Juergen Sept &middot; Tanlock &nbsp;/&nbsp; Steve Humphreys &middot; Hirsch</div><p style="font-size:14px;color:var(--muted);line-height:1.65;margin-top:10px;max-width:660px;">Recent deals in this space get explained after the fact in whatever language makes the acquirer look smart. This panel argues it out in real time: is capital pricing in technology and platform potential, or is it just paying for customer base and distribution because identity is still too unproven to underwrite on its own? The distinction matters because it tells you whether the deals being done are building the future or just consolidating the past.</p></div><div class="abadge ab-g">Theme 2</div></div>
+        <div class="arow"><div class="ar-time">12:05 &ndash; 12:20 PM</div><div><div class="ar-title">1:1</div><div class="ar-sub">Kahl Betham &middot; Gallagher Security</div></div><div class="abadge ab-m">1:1</div></div>
+        <div class="arow session-row"><div class="ar-time">12:20 &ndash; 12:45 PM</div><div><div class="ar-title">Panel: The Discipline That Helps and the Discipline That Kills</div><div class="ar-sub">Josh Arnold &middot; Gallagher Security &nbsp;/&nbsp; Trent Loebel &middot; Torus &nbsp;/&nbsp; Peter Kuciak &middot; Teldio &nbsp;/&nbsp; Leo Luo &middot; BluOcean Security</div><p style="font-size:14px;color:var(--muted);line-height:1.65;margin-top:10px;max-width:660px;">Every leadership team in this room is being told to grow like a platform company and report like a hardware company, and those two instructions are not compatible. One perspective says financial discipline is what separates companies that survive the transition from companies that burn out chasing it. The other says the same discipline, applied too rigidly, is exactly what stops incumbents from making the bets reinvention requires. This panel argues both sides with real numbers behind them.</p></div><div class="abadge ab-g">Theme 2</div></div>
+        <div class="arow"><div class="ar-time">12:45 &ndash; 1:00 PM</div><div><div class="ar-title">1:1</div><div class="ar-sub">Brent Wijnberg &middot; Smartlox</div></div><div class="abadge ab-m">1:1</div></div>
+        <div class="arow"><div class="ar-time">1:00 &ndash; 1:55 PM</div><div><div class="ar-title">Lunch</div></div><div class="abadge ab-m">Lunch</div></div>
+        <div style="padding:22px 36px 8px;font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);border-top:0.5px solid var(--border);">Theme 3 &mdash; Legacy Meets Reinvention</div>
+        <div class="arow"><div class="ar-time">1:55 &ndash; 2:05 PM</div><div><div class="ar-title">My View</div><div class="ar-sub">Joni Lampinen &middot; iLOQ</div></div><div class="abadge ab-m">My View</div></div>
+        <div class="arow"><div class="ar-time">2:05 &ndash; 2:20 PM</div><div><div class="ar-title">1:1</div><div class="ar-sub">Michael Wong &middot; Genea</div></div><div class="abadge ab-m">1:1</div></div>
+        <div class="arow session-row"><div class="ar-time">2:20 &ndash; 2:45 PM</div><div><div class="ar-title">Panel: When to Cannibalize Your Own Business</div><div class="ar-sub">Steve Barton &middot; Acre Security &nbsp;/&nbsp; Jennifer Marx &middot; AMAG &nbsp;/&nbsp; Mike Margrain &middot; Gallagher Security &nbsp;/&nbsp; Scott Fraser &middot; Salto</div><p style="font-size:14px;color:var(--muted);line-height:1.65;margin-top:10px;max-width:660px;">The installed base pays the bills. The roadmap that threatens it is also the only path to relevance in ten years. This panel doesn&rsquo;t resolve that tension, it sharpens it: leaders making the case for aggressive self-disruption sit across from leaders who think that instinct is overrated and protecting the core for longer is the smarter, more disciplined call.</p></div><div class="abadge ab-g">Theme 3</div></div>
+        <div class="arow"><div class="ar-time">2:45 &ndash; 2:55 PM</div><div><div class="ar-title">My View</div><div class="ar-sub">Merv Williams &middot; Gallagher Security</div></div><div class="abadge ab-m">My View</div></div>
+        <div class="arow"><div class="ar-time">2:55 &ndash; 3:10 PM</div><div><div class="ar-title">1:1</div><div class="ar-sub">Chris Goodall &middot; dormakaba</div></div><div class="abadge ab-m">1:1</div></div>
+        <div class="arow session-row"><div class="ar-time">3:10 &ndash; 3:35 PM</div><div><div class="ar-title">Panel: The Incumbent&rsquo;s Advantage Nobody Talks About</div><div class="ar-sub">Chris Wilson &middot; Hanwha Vision &nbsp;/&nbsp; Danny Smith &middot; ColorID &nbsp;/&nbsp; Caine Hillier &middot; Salto &nbsp;/&nbsp; Nick Mooyman &middot; Astute Access</div><p style="font-size:14px;color:var(--muted);line-height:1.65;margin-top:10px;max-width:660px;">The easy narrative is that incumbents are doomed to Sailing Ship Syndrome, getting better at the old model right up until it stops mattering. This panel pushes back on that narrative directly. Scale, install base, channel relationships, and capital reserves are real advantages in a transition, not just legacy weight, and the leaders on this stage will argue that the companies most likely to win the next era are the ones that already won the last one, not the startups betting against them.</p></div><div class="abadge ab-g">Theme 3</div></div>
+        <div class="arow"><div class="ar-time">3:35 &ndash; 3:50 PM</div><div><div class="ar-title">Break</div></div><div class="abadge ab-m">Break</div></div>
+        <div style="padding:22px 36px 8px;font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);border-top:0.5px solid var(--border);">Theme 4 &mdash; People Build Platforms</div>
+        <div class="arow"><div class="ar-time">3:50 &ndash; 4:00 PM</div><div><div class="ar-title">My View</div><div class="ar-sub">Rachel Akbar &middot; Gallagher Security</div></div><div class="abadge ab-m">My View</div></div>
+        <div class="arow"><div class="ar-time">4:00 &ndash; 4:15 PM</div><div><div class="ar-title">1:1</div><div class="ar-sub">Indra Palanimalai &middot; Onugo</div></div><div class="abadge ab-m">1:1</div></div>
+        <div class="arow session-row"><div class="ar-time">4:15 &ndash; 4:40 PM</div><div><div class="ar-title">Panel: Can You Hire Your Way Into a New Era, or Do You Have to Grow Into It</div><div class="ar-sub">Jenny Brant &middot; AVA &nbsp;/&nbsp; Mike Nielsen &middot; RealSense &nbsp;/&nbsp; Kylie Morgan &middot; Gallagher Security</div><p style="font-size:14px;color:var(--muted);line-height:1.65;margin-top:10px;max-width:660px;">Every company facing this transition reaches for the same fix: hire outside talent who already think in software and identity. This panel argues whether that actually works. One view says you cannot bolt a software culture onto a hardware org chart with new hires alone, the org design and incentive structure have to change first. The other says talent is the fastest lever available, and waiting to redesign the org before hiring is how companies run out the clock on their own transformation.</p></div><div class="abadge ab-g">Theme 4</div></div>
+        <div class="arow"><div class="ar-time">4:40 &ndash; 4:55 PM</div><div><div class="ar-title">1:1</div><div class="ar-sub">Gary Morrison &middot; Security Industry Association</div></div><div class="abadge ab-m">1:1</div></div>
+        <div class="arow"><div class="ar-time">4:55 &ndash; 5:05 PM</div><div><div class="ar-title">My View</div><div class="ar-sub">Arturo Falck &middot; Whoo</div></div><div class="abadge ab-m">My View</div></div>
+        <div class="arow"><div class="ar-time">5:05 &ndash; 5:15 PM</div><div><div class="ar-title">Closing Remarks</div><div class="ar-sub">Lee Odess + Gallagher Executive</div></div><div class="abadge ab-m">Close</div></div>
+        <div class="arow"><div class="ar-time">5:15 &ndash; 7:00 PM</div><div><div class="ar-title">Happy Hour &amp; Evening Reception</div></div><div class="abadge ab-g">Reception</div></div>
+      </div>
+    </div>
+  </div>
+</div></div></div>
+
 <!-- THEMES -->
 <div style="background:var(--black);"><div class="wrap"><div class="sec" id="themes">
   <div class="eyebrow-hand" role="presentation">Mainstream Moment &mdash; 4 Themes</div>
@@ -984,44 +1030,6 @@ h3.adh-title { font-size: inherit; font-weight: inherit; font-family: inherit; m
   </div>
 </div></div></div>
 
-<!-- AGENDA — HIDDEN per client request until finalized. Restore by removing this
-     comment wrapper; content is otherwise untouched. -->
-<!--
-<div style="background:var(--stone);"><div class="wrap"><div class="sec" id="agenda">
-  <div class="eyebrow-hand" role="presentation">Full Schedule</div>
-  <div class="sec-head-editorial"><h2 class="italic-line" style="color:var(--white);font-family:'Playfair Display',serif;font-style:italic;">Agenda.</h2></div>
-  <div class="agenda-wrap">
-    <div class="aday">
-      <div class="aday-head"><h3 class="adh-title">Tuesday, October 6 &mdash; Welcome Day</h3><div class="adh-loc">Home of Sir William &amp; Lady Judi Gallagher &middot; Hamilton</div></div>
-      <div class="aday-body">
-        <div class="arow"><div class="ar-time">Morning</div><div><div class="ar-title">Coach Transfer: Auckland &rarr; Hamilton</div><div class="ar-sub">~2.5 hrs</div></div><div class="abadge ab-m">Travel</div></div>
-        <div class="arow"><div class="ar-time">Afternoon</div><div><div class="ar-title">Gallagher Campus Tour</div><div class="ar-sub">Gallagher HQ &middot; pending confirmation</div></div><div class="abadge ab-m">Optional</div></div>
-        <div class="arow"><div class="ar-time">Evening</div><div><div class="ar-title">Welcome Reception &mdash; Home of Sir William &amp; Lady Judi Gallagher</div><div class="ar-sub">Hosted by Gallagher Security</div></div><div class="abadge ab-g">Reception</div></div>
-      </div>
-    </div>
-    <div class="aday">
-      <div class="aday-head main-day"><h3 class="adh-title">Wednesday, October 7 &mdash; Mainstream Moment</h3><div class="adh-loc">BNZ Theatre &middot; Hamilton</div></div>
-      <div class="aday-body">
-        <div class="arow"><div class="ar-time">8:00 &ndash; 9:00 AM</div><div><div class="ar-title">Breakfast &amp; Check-In</div></div><div class="abadge ab-m">Breakfast</div></div>
-        <div class="arow"><div class="ar-time">9:00 &ndash; 9:20 AM</div><div><div class="ar-title">Welcome &amp; P&#333;whiri Ceremony</div><div class="ar-sub">Lee Odess &middot; Gallagher Security &middot; Cultural Liaison</div></div><div class="abadge ab-a">Opening</div></div>
-        <div class="arow session-row"><div class="ar-time">9:20 &ndash; 10:50 AM</div><div><div class="ar-title">Panel Topic 1 &mdash; From Doors to Identity</div><div class="ar-sub">My View &middot; 1:1 &middot; Panel &middot; 1:1 &middot; Panel</div></div><div class="abadge ab-g">Panel 1</div></div>
-        <div class="arow"><div class="ar-time">10:50 &ndash; 11:10 AM</div><div><div class="ar-title">Break</div></div><div class="abadge ab-m">Break</div></div>
-        <div class="arow session-row"><div class="ar-time">11:10 AM &ndash; 12:40 PM</div><div><div class="ar-title">Panel Topic 2 &mdash; Capital Shapes Strategy</div><div class="ar-sub">My View &middot; 1:1 &middot; Panel &middot; 1:1 &middot; Panel</div></div><div class="abadge ab-g">Panel 2</div></div>
-        <div class="arow"><div class="ar-time">12:40 &ndash; 1:40 PM</div><div><div class="ar-title">Lunch</div></div><div class="abadge ab-m">Lunch</div></div>
-        <div class="arow session-row"><div class="ar-time">1:40 &ndash; 3:10 PM</div><div><div class="ar-title">Panel Topic 3 &mdash; Legacy Meets Reinvention</div><div class="ar-sub">My View &middot; 1:1 &middot; Panel &middot; 1:1 &middot; Panel</div></div><div class="abadge ab-g">Panel 3</div></div>
-        <div class="arow"><div class="ar-time">3:10 &ndash; 3:30 PM</div><div><div class="ar-title">Break</div></div><div class="abadge ab-m">Break</div></div>
-        <div class="arow session-row"><div class="ar-time">3:30 &ndash; 5:00 PM</div><div><div class="ar-title">Panel Topic 4 &mdash; People Build Platforms</div><div class="ar-sub">My View &middot; 1:1 &middot; Panel &middot; 1:1 &middot; Panel</div></div><div class="abadge ab-g">Panel 4</div></div>
-        <div class="arow"><div class="ar-time">5:00 &ndash; 5:15 PM</div><div><div class="ar-title">Closing Remarks</div><div class="ar-sub">Lee Odess + Gallagher Executive</div></div><div class="abadge ab-m">Close</div></div>
-        <div class="arow"><div class="ar-time">5:15 PM+</div><div><div class="ar-title">Happy Hour &amp; Evening Reception</div></div><div class="abadge ab-g">Reception</div></div>
-      </div>
-    </div>
-    <div class="agenda-note">
-      <div><div class="agenda-note-title">Thursday, Oct 8 &mdash; Closing Experience (optional)</div><div class="agenda-note-sub">Waiheke Island sailing + winery &middot; Coach return to Auckland &middot; Departures from AKL</div></div>
-      <div class="abadge ab-g">Hosted Experience</div>
-    </div>
-  </div>
-</div></div></div>
--->
 
 <!-- VENUE -->
 <div style="background:var(--black);"><div class="wrap"><div class="sec" id="venue">
@@ -1090,7 +1098,7 @@ h3.adh-title { font-size: inherit; font-weight: inherit; font-family: inherit; m
     <div class="footer-col">
       <div class="fc-title">Navigate</div>
       <a href="#about">About</a><a href="#experience">Experience</a><a href="#speakers">Speakers</a>
-      <a href="#themes">Themes</a><a href="#venue">Venue</a><a href="#faq">FAQ</a>
+      <a href="#themes">Themes</a><a href="#agenda">Agenda</a><a href="#venue">Venue</a><a href="#faq">FAQ</a>
     </div>
 
   </div>
