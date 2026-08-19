@@ -288,8 +288,8 @@ footer{background:var(--stone);border-top:0.5px solid var(--border);padding:64px
   .pbreak-text{padding:0 24px;}
 
   /* Hero: keep CTAs from being cropped, stack meta + buttons */
-  .hero{padding-bottom:100px;}
-  .hero-content{padding:0 20px 80px;}
+  .hero{height:auto;min-height:100vh;min-height:100svh;padding-bottom:0;}
+  .hero-content{padding:100px 20px 56px;}
   .hero-bottom{flex-direction:column;align-items:stretch;gap:28px;}
   .hero-meta{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px;width:100%;}
   .hero-btns{flex-direction:column;width:100%;}
@@ -301,8 +301,13 @@ footer{background:var(--stone);border-top:0.5px solid var(--border);padding:64px
      min wins and "ACS26" in 100px Playfair Black Italic overflows a
      320–375px screen. Lowering the floor here is what actually prevents
      the overflow the spec was asking about. */
-  .hero-title-editorial .acs-num{font-size:clamp(72px,20vw,140px);}
-  .hero-title-editorial .nz-line{font-size:clamp(34px,9vw,64px);}
+  .hero-title-editorial{margin-bottom:16px;}
+  .hero-title-editorial .acs-num{font-size:clamp(56px,16vw,96px);}
+  .hero-title-editorial .nz-line{font-size:clamp(28px,7.5vw,52px);}
+  .hero-tacc-accent{font-size:clamp(26px,6vw,40px);}
+  .hero-sup{margin-bottom:14px;}
+  .hero-meta{gap:16px 14px;}
+  .hm-value{font-size:15px;}
 
   /* Stat strip: 4-across flex row → 2×2 grid */
   .stat-strip{display:grid;grid-template-columns:1fr 1fr;border:0.5px solid var(--border);}
@@ -313,7 +318,8 @@ footer{background:var(--stone);border-top:0.5px solid var(--border);padding:64px
 
 /* Smallest phones (iPhone SE and similar ~320–375px) */
 @media(max-width:380px){
-  .hero-title-editorial .acs-num{font-size:15vw;}
+  .hero-title-editorial .acs-num{font-size:14vw;}
+  .hero-title-editorial .nz-line{font-size:7vw;}
 }
 
 /* ── HAMBURGER + MOBILE MENU ── */
@@ -696,7 +702,7 @@ h3.adh-title { font-size: inherit; font-weight: inherit; font-family: inherit; m
 html{overflow-x:hidden;}
 body{overflow-x:hidden;width:100%;max-width:100%;}
 img,svg,video{max-width:100%;}
-.ticker{overflow:hidden;}            /* contain the marquee so it can't force horizontal scroll */
+.ticker{overflow:hidden;}
 @media(max-width:600px){
   .wrap{padding:0 18px;}
   .intro-tag{right:8px;bottom:-14px;font-size:30px;padding:12px 16px;}
@@ -713,18 +719,33 @@ img,svg,video{max-width:100%;}
   h2.disp,.sec-head-editorial .label-line,.sec-head-editorial .italic-line,.ar-title,.tc-name{overflow-wrap:break-word;word-break:break-word;}
 }
 
-/* ============ STORYSCROLL (scroll-reveal + progress) ============ */
+/* ============ STORYSCROLL (section reveal + progress) — containers only, hover untouched ============ */
 .scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--green);z-index:400;pointer-events:none;transition:width .12s linear;}
-html.ss :is(.intro-photo-wrap,.intro-body,.stat-cell,.hosted-bar,.theme-card,.speaker-card,.arow,.exp-week>*,.venue-img-cell,.vd-cell,.amc,.faq-item,.pquote,.sec-head-editorial,.agenda-note,.cta-cnt>*){opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,.8,.3,1),transform .7s cubic-bezier(.16,.8,.3,1);}
-html.ss :is(.intro-photo-wrap,.intro-body,.stat-cell,.hosted-bar,.theme-card,.speaker-card,.arow,.exp-week>*,.venue-img-cell,.vd-cell,.amc,.faq-item,.pquote,.sec-head-editorial,.agenda-note,.cta-cnt>*).in{opacity:1;transform:none;}
+html.ss :is(.intro-grid,.stat-strip,.themes-grid,.speakers-grid,.agenda-wrap,.agenda-note,.venue-images,.venue-details-row,.akl-mosaic,.akl-label-bar,.faq-list,.pquote,.sec-head-editorial,.eyebrow-hand,.exp-week,.cta-cnt>*){opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,.8,.3,1),transform .8s cubic-bezier(.16,.8,.3,1);}
+html.ss :is(.intro-grid,.stat-strip,.themes-grid,.speakers-grid,.agenda-wrap,.agenda-note,.venue-images,.venue-details-row,.akl-mosaic,.akl-label-bar,.faq-list,.pquote,.sec-head-editorial,.eyebrow-hand,.exp-week,.cta-cnt>*).in{opacity:1;transform:none;}
 @media(prefers-reduced-motion:reduce){
-  html.ss :is(.intro-photo-wrap,.intro-body,.stat-cell,.hosted-bar,.theme-card,.speaker-card,.arow,.exp-week>*,.venue-img-cell,.vd-cell,.amc,.faq-item,.pquote,.sec-head-editorial,.agenda-note,.cta-cnt>*){opacity:1!important;transform:none!important;transition:none!important;}
+  html.ss :is(.intro-grid,.stat-strip,.themes-grid,.speakers-grid,.agenda-wrap,.agenda-note,.venue-images,.venue-details-row,.akl-mosaic,.akl-label-bar,.faq-list,.pquote,.sec-head-editorial,.eyebrow-hand,.exp-week,.cta-cnt>*){opacity:1!important;transform:none!important;transition:none!important;}
   .scroll-progress{transition:none;}
 }
 
+
+/* ===== Experience Week — mobile: full-width stacked cards =====
+   (base .exp-week 4-col rule is declared later in the sheet than the earlier
+   breakpoints, so it overrode them; this end-of-sheet block wins by source order) */
+@media(max-width:760px){
+  .exp-week{display:flex!important;flex-direction:column;gap:12px;margin-top:32px;margin-bottom:28px;}
+  .exp-week>*{width:100%;}
+  .optional-day,.event-day{padding:22px 20px;border-radius:6px;}
+  .optional-day .edn,.event-day .edn{font-size:18px;line-height:1.25;}
+  .optional-day .edl,.event-day .edl{font-size:9px;}
+  .optional-day .edd,.event-day .edd{font-size:12px;margin-bottom:14px;padding-bottom:14px;}
+  .optional-day .day-desc,.event-day .day-desc{font-size:15px;}
+  .event-badge,.opt-pill{margin-bottom:10px;}
+  .city-tag{margin-top:12px;}
+}
 </style>
 <script>document.documentElement.className+=" ss";</script>
-<noscript><style>html.ss :is(.intro-photo-wrap,.intro-body,.stat-cell,.hosted-bar,.theme-card,.speaker-card,.arow,.exp-week>*,.venue-img-cell,.vd-cell,.amc,.faq-item,.pquote,.sec-head-editorial,.agenda-note,.cta-cnt>*){opacity:1!important;transform:none!important;}</style></noscript>
+<noscript><style>html.ss :is(.intro-grid,.stat-strip,.themes-grid,.speakers-grid,.agenda-wrap,.agenda-note,.venue-images,.venue-details-row,.akl-mosaic,.akl-label-bar,.faq-list,.pquote,.sec-head-editorial,.eyebrow-hand,.exp-week,.cta-cnt>*){opacity:1!important;transform:none!important;}</style></noscript>
 </head>
 <body>
 <div class="scroll-progress" id="scrollProgress"></div>
@@ -1308,25 +1329,30 @@ if (hamburger && mobileMenu) {
 </script>
 
 <script>
-/* Storyscroll: reveal on scroll + progress bar */
+/* Storyscroll */
 (function(){
-  var sel=".intro-photo-wrap,.intro-body,.stat-cell,.hosted-bar,.theme-card,.speaker-card,.arow,.exp-week>*,.venue-img-cell,.vd-cell,.amc,.faq-item,.pquote,.sec-head-editorial,.agenda-note,.cta-cnt>*";
-  var els=[].slice.call(document.querySelectorAll(sel));
-  var counts=new Map();
-  els.forEach(function(e){var p=e.parentElement;var i=counts.get(p)||0;e.style.transitionDelay=Math.min(i*55,330)+"ms";counts.set(p,i+1);});
-  function revealAll(){els.forEach(function(e){e.classList.add("in");});}
-  var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion:reduce)").matches;
-  if(reduce||!("IntersectionObserver" in window)){revealAll();return;}
-  var io=new IntersectionObserver(function(ents){ents.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}});},{rootMargin:"0px 0px -8% 0px",threshold:0.08});
-  els.forEach(function(e){io.observe(e);});
-  setTimeout(revealAll,4000); /* failsafe */
+  try{
+    var sel=".intro-grid,.stat-strip,.themes-grid,.speakers-grid,.agenda-wrap,.agenda-note,.venue-images,.venue-details-row,.akl-mosaic,.akl-label-bar,.faq-list,.pquote,.sec-head-editorial,.eyebrow-hand,.exp-week,.cta-cnt>*";
+    var els=[].slice.call(document.querySelectorAll(sel));
+    function revealAll(){els.forEach(function(e){e.classList.add("in");});}
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+    if(reduce||!("IntersectionObserver" in window)){revealAll();return;}
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    },{rootMargin:"0px 0px -10% 0px",threshold:0});
+    els.forEach(function(e){io.observe(e);});
+    setTimeout(revealAll,3500); /* failsafe: nothing can stay hidden */
+  }catch(err){
+    document.documentElement.classList.remove("ss"); /* on any failure, show everything */
+  }
 })();
+/* Scroll progress bar */
 (function(){
-  var sp=document.getElementById("scrollProgress");if(!sp)return;
+  var sp=document.getElementById("scrollProgress"); if(!sp) return;
   var d=document.documentElement;
-  function upd(){var h=d.scrollHeight-d.clientHeight;var p=h>0?((d.scrollTop||window.pageYOffset)/h)*100:0;sp.style.width=p+"%";}
+  function upd(){ var h=d.scrollHeight-d.clientHeight; sp.style.width=(h>0?((d.scrollTop||window.pageYOffset)/h*100):0)+"%"; }
   window.addEventListener("scroll",upd,{passive:true});
-  window.addEventListener("resize",upd);upd();
+  window.addEventListener("resize",upd); upd();
 })();
 </script>
 </body>
